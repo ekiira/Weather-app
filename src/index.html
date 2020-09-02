@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+
+  <!-- CSS only -->
+  <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+    crossorigin="anonymous"
+  >
+</head>
+<body>
+  <div class="loader">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+  </div>
+  <section class="wrapper">
+    <!-- <h2>Weather Forecast</h2> -->
+    <div class="bbg">
+      <div class="container ">
+
+      <header class="ml-auto ">
+        <form class="w-75 mx-auto">
+          <label for="regionName"></label>
+          <input type="text" id="regionName" class="form-control search-bar" search-city required placeholder="search your city"/>
+       <br>
+       <!-- <button class="btn btn-secondary" type="submit" >Search</button> -->
+       </form>
+      
+      </header>
+      <div>
+  
+          <div class='weather py-4'>
+            
+            <p class="weather-city text-center pt-5">London 
+            </p>
+            <div class='text-center'>
+                <p class=" weather-degree"><span class="weather-degree-big">16  <span>&#176;</span></span> 
+                <br/>
+                <span class="weather-degree-small"> 
+                  28 Feels like 26
+                </span>
+                </p>
+
+             
+                <p class="weather-state"> 
+                  cloudy</p>
+                  <div class="row">
+                    <div class="col-12">
+                      <h4 class="text-left py-3">Daily</h4>
+                    <div class="table-responsive">
+                      <table class="table"> 
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+
+                            <th scope="col">Today</th>
+  
+                            <th scope="col">Monday</th>
+                            <th scope="col">Tuesday</th>
+                            <th scope="col">Wednesday</th>
+                            <th scope="col">Thursday</th>
+                            <th scope="col">Friday</th>
+                            <th scope="col">Saturday</th>
+                            <th scope="col">Sunday</th>
+  
+                          </tr>
+                        </thead>
+                       <tbody>
+                        <tr>
+                          <th scope="row">Temperature</td>
+                          <td>Cell D</td>
+                          <td>Cell C</td>
+                          <td>Cell D</td>
+                          <td>Cell C</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Humidity</th>
+                          <td>Cell D</td>
+                          <td>Cell C</td>
+                          <td>Cell D</td>
+                          <td>Cell C</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Sunset</th>
+                          <td>Cell D</td>
+                          <td>Cell C</td>
+                          <td>Cell D</td>
+                          <td>Cell C</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Sunrise</th>
+                          <td>Cell D</td>
+                          <td>Cell C</td>
+                          <td>Cell D</td>
+                          <td>Cell C</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+                          <td>Cell D</td>
+
+                        </tr>
+                       
+                       </tbody>
+                    </div>
+                      </table>
+                      
+                    </div>
+                    
+                    </div>
+                 
+                   
+                  </div>
+              </div>
+             
+            </div>
+          </div>
+  
+    </div>
+   
+
+    </div>
+    
+
+ </section>
+
+  
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script 
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous">
+  </script>
+  <script 
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+    crossorigin="anonymous">
+  </script>
+  <script 
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
+    crossorigin="anonymous">
+  </script> 
+
+  <!-- <script src="./assets/js/index.js"></script> -->
+</body>
+</html>
