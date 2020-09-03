@@ -14,136 +14,182 @@
   >
 </head>
 <body>
-  <div class="loader">
+  <!-- <div class="loader">
     <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
-  </div>
-  <section class="wrapper">
-    <!-- <h2>Weather Forecast</h2> -->
-    <div class="bbg">
-      <div class="container ">
-
-      <header class="ml-auto ">
-        <form class="w-75 mx-auto">
-          <label for="regionName"></label>
-          <input type="text" id="regionName" class="form-control search-bar" search-city required placeholder="search your city"/>
-       <br>
-       <!-- <button class="btn btn-secondary" type="submit" >Search</button> -->
-       </form>
-      
-      </header>
-      <div>
+  </div> -->
+  <header>
+    <div class="container">
+      <nav  class="navbar  fixed py-0">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand brand" href="#home"><span class="colored">d.Weather</a>
+            </div>
+            <div class="ml-auto">
+              <form class="w-75 mx-auto">
+                <label for="regionName"></label>
+                <input type="text" id="regionName" class="form-control search-bar" search-city required placeholder="search your city"/>
+             <br>
+             </form>
+            </div>
+        </div> 
+    </nav>
+    </div>
+  </header>
   
-          <div class='weather py-4'>
+
+
+    <div class="landing">  
+        <div class="row bbg ml-0">
+    <div class="banner"></div>
+            <div class="container">
+                <div class="col-md-12 splash">
+                    <div>
+                      <p class=" text-center pt-5">
+                        <span class="weather-city">
+                          London 
+                        </span>
+                        <br/>
+                        <span class="date">12, sep 5050</span>
+                      </p>
+                    
+                      <div class='text-center'>
+                        <p>
+                          <span class="  weather-degree-big">
+                            <img src="http://openweathermap.org/img/wn/04n@2x.png" alt="weather-icon" class="weather-icon"/>
+                            <span class="weather-degree"> 16 &#176;</span>
+                           
+                            </span>
+                            <br/>
+                            <span class="weather-state"> 
+                              cloudy
+                
+                             </span>
+                        </p>
+                        
+                          
+                          
+                      
+                           <div class="fixed-row py-4">
+                            <div class="det">
+                              <div class="card">
+                                  <p class="card-title">Humidity</p>
             
-            <p class="weather-city text-center pt-5">London 
-            </p>
-            <div class='text-center'>
-                <p class=" weather-degree"><span class="weather-degree-big">16  <span>&#176;</span></span> 
-                <br/>
-                <span class="weather-degree-small"> 
-                  28 Feels like 26
-                </span>
-                </p>
-
-             
-                <p class="weather-state"> 
-                  cloudy</p>
-                  <div class="row">
-                    <div class="col-12">
-                      <h4 class="text-left py-3">Daily</h4>
-                    <div class="table-responsive">
-                      <table class="table"> 
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-
-                            <th scope="col">Today</th>
-  
-                            <th scope="col">Monday</th>
-                            <th scope="col">Tuesday</th>
-                            <th scope="col">Wednesday</th>
-                            <th scope="col">Thursday</th>
-                            <th scope="col">Friday</th>
-                            <th scope="col">Saturday</th>
-                            <th scope="col">Sunday</th>
-  
-                          </tr>
-                        </thead>
-                       <tbody>
-                        <tr>
-                          <th scope="row">Temperature</td>
-                          <td>Cell D</td>
-                          <td>Cell C</td>
-                          <td>Cell D</td>
-                          <td>Cell C</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-
-                        </tr>
-                        <tr>
-                          <th scope="row">Humidity</th>
-                          <td>Cell D</td>
-                          <td>Cell C</td>
-                          <td>Cell D</td>
-                          <td>Cell C</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-
-                        </tr>
-                        <tr>
-                          <th scope="row">Sunset</th>
-                          <td>Cell D</td>
-                          <td>Cell C</td>
-                          <td>Cell D</td>
-                          <td>Cell C</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-
-                        </tr>
-                        <tr>
-                          <th scope="row">Sunrise</th>
-                          <td>Cell D</td>
-                          <td>Cell C</td>
-                          <td>Cell D</td>
-                          <td>Cell C</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-                          <td>Cell D</td>
-
-                        </tr>
-                       
-                       </tbody>
-                    </div>
-                      </table>
+                                  <p class="card-value humidity">12</p>
+                              </div>
+                            </div>
+                            <div class="det">
+                              <div class="card">
+                                  <p class="card-title">Feels like</p>
+                                  <p class="card-value feels-like">12</p>
+            
+                              </div>
+                            </div>
+                            <div class="det">
+                              <div class="card">
+                                  <p class="card-title">UV Index</p>
+                                  <p class="card-value uvi">12</p>
+            
+                              </div>
+                            </div>
+                            <div class="det">
+                              <div class="card">
+                                  <p class="card-title">Clouds</p>
+                                  <p class="card-value clouds">12</p>
+            
+                              </div>
+                            </div>
+                           </div>
+                            <!-- <div class="row">
+                              <div class="col-12">
+                                <h4 class="text-left py-3">Daily</h4>
+                              <div class="table-responsive">
+                                <table class="table"> 
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">#</th>
+            
+                                      <th scope="col">Today</th>
+            
+                                      <th scope="col">Monday</th>
+                                      <th scope="col">Tuesday</th>
+                                      <th scope="col">Wednesday</th>
+                                      <th scope="col">Thursday</th>
+                                      <th scope="col">Friday</th>
+                                      <th scope="col">Saturday</th>
+                                      <th scope="col">Sunday</th>
+            
+                                    </tr>
+                                  </thead>
+                                 <tbody>
+                                  <tr>
+                                    <th scope="row">Temperature</td>
+                                    <td>Cell D</td>
+                                    <td>Cell C</td>
+                                    <td>Cell D</td>
+                                    <td>Cell C</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+            
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Humidity</th>
+                                    <td>Cell D</td>
+                                    <td>Cell C</td>
+                                    <td>Cell D</td>
+                                    <td>Cell C</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+            
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Sunset</th>
+                                    <td>Cell D</td>
+                                    <td>Cell C</td>
+                                    <td>Cell D</td>
+                                    <td>Cell C</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+            
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Sunrise</th>
+                                    <td>Cell D</td>
+                                    <td>Cell C</td>
+                                    <td>Cell D</td>
+                                    <td>Cell C</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+                                    <td>Cell D</td>
+            
+                                  </tr>
+                                 
+                                 </tbody>
+                              </div>
+                                </table>
+                                
+                              </div>
+                              
+                              </div>
+                           
+                              -->
+                          
+                            </div>
                       
                     </div>
-                    
-                    </div>
-                 
-                   
-                  </div>
-              </div>
-             
+                </div>
             </div>
-          </div>
-  
-    </div>
-   
+        </div>
+      </div>
 
-    </div>
-    
 
- </section>
-
-  
 
   <!-- JS, Popper.js, and jQuery -->
   <script 
