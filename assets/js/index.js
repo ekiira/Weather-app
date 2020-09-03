@@ -1,7 +1,5 @@
-import './styles/style.css';
-// import dotenv from 'dotenv';
 
-// dotenv.config()
+const API_KEY = '77a720e73809ab741a5ab7822f1f337c'
 const form = document.querySelector('form');
 const namee = document.querySelector('input[search-city]');
 const loader = document.querySelector(".loader");
@@ -16,7 +14,6 @@ const weatherClouds = document.querySelector('.clouds')
 const date = document.querySelector('.date')
 
 
-const key = process.env.API_KEY
 
 let lat;
 let lon;
@@ -26,7 +23,7 @@ form.addEventListener('submit', async (e) => {
 const searchData = namee.value;
 
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-const url1 = `http://api.openweathermap.org/data/2.5/weather?q=${searchData}&units=metric&APPID=${key}`
+const url1 = `http://api.openweathermap.org/data/2.5/weather?q=${searchData}&units=metric&APPID=${API_KEY}`
 const response = await fetch(proxyUrl + url1 , {
     headers: {
       'Content-Type': 'application/json',
@@ -39,7 +36,7 @@ const response = await fetch(proxyUrl + url1 , {
   lon = finalResponse.coord.lon
   weatherCity.innerHTML = finalResponse.name;
   if(lat || lon) {
-    const url2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely&appid=${key}`
+    const url2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely&appid=${API_KEY}`
 
       const response2= await fetch(proxyUrl + url2 , {
         headers: {
