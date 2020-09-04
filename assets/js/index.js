@@ -56,21 +56,26 @@ const response = await fetch(proxyUrl + url1 , {
         }
       });
       const finalResponse2 = await response2.json();
-      const wDegree = Math.round(Number(finalResponse2.current.temp))
-      const wIcon = finalResponse2.current.weather[0].icon
-      const wState = finalResponse2.current.weather[0].description
-      const wStateMain = finalResponse2.current.weather[0].main
-      const humidity =  Math.round(Number(finalResponse2.current.humidity))
-      const feelsLike = Math.round(Number(finalResponse2.current.feels_like))
-      const uv = Math.round(Number(finalResponse2.current.uvi))
-      const clouds = Math.round(Number(finalResponse2.current.clouds))
-      const timestamp = finalResponse2.current.dt
-      const currentDate = new Date(timestamp * 1000).toUTCString()
 
       if (finalResponse2) {
         loader.classList.add('hidden');
         loader.style.display = 'none';
       }
+      
+      localStorage.setItem('allCurrentData', JSON.stringify(finalResponse2.current)); 
+     
+      const currentData = JSON.parse(localStorage.getItem('allCurrentData') )
+
+      const wDegree = Math.round(Number(currentData.temp))
+      const wIcon = currentData.weather[0].icon
+      const wState = currentData.weather[0].description
+      const wStateMain = currentData.weather[0].main
+      const humidity =  Math.round(Number(currentData.humidity))
+      const feelsLike = Math.round(Number(currentData.feels_like))
+      const uv = Math.round(Number(currentData.uvi))
+      const clouds = Math.round(Number(currentData.clouds))
+      const timestamp = currentData.dt
+      const currentDate = new Date(timestamp * 1000).toUTCString()
       
       switch (true) {
         case (wStateMain.includes('Clouds')):
