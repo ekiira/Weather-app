@@ -224,6 +224,8 @@ path {
 
 .weather-degree-big {
   font-size: 5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .det {
@@ -231,6 +233,11 @@ path {
   margin-right: 15px;
   margin-left: 15px;
   white-space: nowrap;
+  display: none;
+}
+
+.weather-icon {
+  display: none;
 }
 
 .weather-degree-small {
@@ -261,9 +268,9 @@ path {
 
 .fixed-row {
   display: flex !important;
-    width: 100% !important;
-    overflow-x: auto !important;
-    justify-content: center;
+  width: 100% !important;
+  overflow-x: auto !important;
+  justify-content: center;
 }
 
 .search-bar, .search-bar:hover, .search-bar:focus{

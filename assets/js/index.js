@@ -12,6 +12,8 @@ const weatherFeelsLike = document.querySelector('.feels-like')
 const weatherUvIndex = document.querySelector('.uvi')
 const weatherClouds = document.querySelector('.clouds')
 const date = document.querySelector('.date')
+const weatherCard = document.querySelectorAll('.det')
+
 
 const background = document.querySelector('.bbg')
 
@@ -66,6 +68,15 @@ const response = await fetch(proxyUrl + url1 , {
      
       const currentData = JSON.parse(localStorage.getItem('allCurrentData') )
 
+      if(currentData) {
+        let i;
+        for (i = 0; i < weatherCard.length; i++) {
+          weatherCard[i].style.display = 'block'
+        };
+
+        weatherIcon.style.display = 'block'
+      }
+
       const wDegree = Math.round(Number(currentData.temp))
       const wIcon = currentData.weather[0].icon
       const wState = currentData.weather[0].description
@@ -100,6 +111,8 @@ const response = await fetch(proxyUrl + url1 , {
           background.style.backgroundImage = "url('../../assets/images/bg-2.jpeg')"
           break;
       }
+
+     
 
       let uvState;
       switch (true) {
