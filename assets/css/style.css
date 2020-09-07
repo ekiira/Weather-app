@@ -1,3 +1,17 @@
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 .loader {
 	position: fixed;
 	top: 0;
@@ -170,6 +184,14 @@ path {
   }
 }
 
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .text {
 	font-family: Helvetica, 'Helvetica Neue', sans-serif;
 	letter-spacing: 1px;
@@ -182,8 +204,24 @@ path {
 	width: 200px;
 }
 
+.navbar {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.w-form {
+  width: 66%;
+  margin: 2rem auto;
+}
+
 .weather-form {
-  width: 25rem;
+  width: 100%;
 }
 
 .search-bar, .search-bar:hover, .search-bar:focus{
@@ -193,13 +231,19 @@ path {
   border-radius: 0%;
   color: white;
   font-size: 0.7rem;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .search-bar::placeholder {
   color: white;
   font-size: 0.7rem;
 }
-
 
 .landing {
   position: relative;
@@ -214,6 +258,13 @@ path {
   background-attachment: fixed;
   width: 100%;
   background-size: cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-left: 0;
 }
 
 .colored {
@@ -239,12 +290,20 @@ path {
   display: flex;
   justify-content: center; 
   align-items: center; 
+  position: relative;
+  z-index: 99;
+}
+
+.weather-info {
+  text-align: center;
+  padding-top: 3rem;
 }
 
 .weather-degree-big {
   font-size: 5rem;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .det {
@@ -272,13 +331,25 @@ path {
   font-size: 1.3rem;
 }
 
+.weather-info-two {
+  text-align: center;
+}
+
 .card {
   background: transparent;
   border: none;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  border-radius: .25rem;
 }
 
 .card-title {
-  font-size: 0.8rem !important;
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
 }
 
 .card-value {
@@ -290,6 +361,8 @@ path {
   width: 100% !important;
   overflow-x: auto !important;
   justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .table {
@@ -313,5 +386,30 @@ path {
 @media only screen and (max-width: 374px) {
   .weather-form {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .splash {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 960px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
   }
 }
