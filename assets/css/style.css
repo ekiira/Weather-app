@@ -182,6 +182,25 @@ path {
 	width: 200px;
 }
 
+.weather-form {
+  width: 25rem;
+}
+
+.search-bar, .search-bar:hover, .search-bar:focus{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0%;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.search-bar::placeholder {
+  color: white;
+  font-size: 0.7rem;
+}
+
+
 .landing {
   position: relative;
   color: white;
@@ -273,19 +292,6 @@ path {
   justify-content: center;
 }
 
-.search-bar, .search-bar:hover, .search-bar:focus{
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid white;
-  color: white;
-  font-size: 0.7rem;
-}
-
-.search-bar::placeholder {
-  color: white;
-  font-size: 0.7rem;
-}
-
 .table {
   color: white !important;
 }
@@ -296,4 +302,16 @@ path {
   right: 0;
   left: 0;
   z-index: 1030;
+}
+
+@media (min-width:375px) and (max-width: 499px) {
+  .weather-form {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .weather-form {
+    width: 100%;
+  }
 }
