@@ -253,6 +253,7 @@ path {
 .bbg {
   background: url('../images/bg-2.jpeg')no-repeat;
   height:100vh;
+  max-height: 150vh;
   color: white;
   background-position: center;
   background-attachment: fixed;
