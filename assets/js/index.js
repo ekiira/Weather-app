@@ -42,8 +42,6 @@ form.addEventListener('submit', async (e) => {
   lat = finalResponse.coord.lat;
   lon = finalResponse.coord.lon;
 
-  // Save data to localstorage
-  localStorage.setItem('currentCity', finalResponse.name); 
 
   // set search input to initial state
   namee.value = ''
@@ -62,6 +60,10 @@ form.addEventListener('submit', async (e) => {
 
       
       // Save data to localstorage
+      localStorage.clear();
+      window.location.reload();
+      
+      localStorage.setItem('currentCity', finalResponse.name); 
       localStorage.setItem('allCurrentData', JSON.stringify(finalResponse2.current)); 
     } 
   });
@@ -70,18 +72,7 @@ form.addEventListener('submit', async (e) => {
   weatherCity.innerHTML = localStorage.getItem('currentCity')
   const currentData = JSON.parse(localStorage.getItem('allCurrentData') )
 
-  // if (finalResponse2) {
-  //   loader.classList.add('hidden');
-  //   loader.style.display = 'none';
-  // }
-  if (localStorage.length > 0){
-    console.log('yes')
-    //Items are stored in local stor age
-}else{
-  console.log('no')
 
-    //Local storage is empty
-}
 console.log('dd', currentData)
 
   if(currentData) {
@@ -92,6 +83,10 @@ console.log('dd', currentData)
       weatherCard[i].style.display = 'block'
     }
   weatherIcon.style.display = 'block'
+
+
+
+   
 
   const wDegree = Math.round(Number(currentData.temp))
   const wIcon = currentData.weather[0].icon
@@ -154,6 +149,7 @@ console.log('dd', currentData)
 }
 
 
+
 weatherDegree.innerHTML = `${wDegree}&#176`
 weatherIcon.src = `http://openweathermap.org/img/wn/${wIcon}@2x.png`
 weatherState.innerHTML = wState
@@ -163,6 +159,6 @@ weatherFeelsLike.innerHTML = `${feelsLike}&#176;`
 weatherUvIndex.innerHTML = uvState
 weatherClouds.innerHTML = 0 ? clouds : `${clouds}%`
 date.innerHTML = currentDate.split(' ').slice(0, 4).join(' ');
+
+
 }
-
-
