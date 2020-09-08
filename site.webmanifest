@@ -17,5 +17,12 @@
   "theme_color":"#ffffff",
   "background_color":"#ffffff",
   "display":"standalone",
-  "start_url": "../index.html"
+  "start_url": "../index.html",
+  "prefer_related_applications": true,
+"related_applications": [
+  {
+    "platform": "play",
+    "id": "com.google.samples.apps.iosched"
+  }
+]
 }
