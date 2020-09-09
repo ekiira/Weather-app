@@ -30,7 +30,7 @@ form.addEventListener('submit', async (e) => {
 
   // Fetch longitude and latitude 
   const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-  const url1 = `http://api.openweathermap.org/data/2.5/weather?q=${searchData}&units=metric&APPID=${API_KEY}`
+  const url1 = `https://api.openweathermap.org/data/2.5/weather?q=${searchData}&units=metric&APPID=${API_KEY}`
   const response = await fetch(proxyUrl + url1 , {
       headers: {
         'Content-Type': 'application/json',
