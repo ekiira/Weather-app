@@ -67,9 +67,9 @@
         <div class="container">
             <div class="w-form">
               <form class="weather-form">
-                <label for="regionName"></label>
-                <input type="text" id="regionName" class="form-control search-bar" search-city required placeholder="search your city"/>
-             <br>
+                <input type="text" id="cityName" class="form-control search-bar" search-city required placeholder="search your city"/>
+                <label for="cityName" class="label">City Name</label>
+              <br>
              </form>
              
             </div>
@@ -87,13 +87,14 @@
                 <div class="splash">
                     <div>
                       <p class="weather-info">
+                    <p class="message"></p>
+
                         <span class="weather-city">
                           
                         </span>
                         <br/>
                         <span class="date"></span>
                       </p>
-                    
                       <div class='weather-info-two'>
                         <p>
                           <span class="weather-degree-big">

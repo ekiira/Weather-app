@@ -15,7 +15,7 @@ const date = document.querySelector('.date')
 const weatherCard = document.querySelectorAll('.det')
 const background = document.querySelector('.bbg')
 const loader = document.querySelector(".loader");
-
+const message  = document.querySelector(".message");
 let lat;
 let lon;
 
@@ -37,8 +37,19 @@ form.addEventListener('submit', async (e) => {
         'Access-Control-Allow-Origin' : '*',
       }
     });
-
   const finalResponse = await response.json();
+
+  // error handling
+  if (finalResponse.cod === '404') {
+    localStorage.clear();
+
+    loader.classList.add('hidden');
+    loader.style.display = 'none';
+
+    message.innerHTML = 'City not found, Try again'
+  }
+
+
   lat = finalResponse.coord.lat;
   lon = finalResponse.coord.lon;
 
@@ -59,7 +70,7 @@ form.addEventListener('submit', async (e) => {
       const finalResponse2 = await response2.json();
 
       
-      // Save data to localstorage
+      // Clear existing data and save new data to localstorage
       localStorage.clear();
       window.location.reload();
       
@@ -72,9 +83,6 @@ form.addEventListener('submit', async (e) => {
   weatherCity.innerHTML = localStorage.getItem('currentCity')
   const currentData = JSON.parse(localStorage.getItem('allCurrentData') )
 
-
-console.log('dd', currentData)
-
   if(currentData) {
     loader.classList.add('hidden');
     loader.style.display = 'none';
@@ -83,10 +91,6 @@ console.log('dd', currentData)
       weatherCard[i].style.display = 'block'
     }
   weatherIcon.style.display = 'block'
-
-
-
-   
 
   const wDegree = Math.round(Number(currentData.temp))
   const wIcon = currentData.weather[0].icon

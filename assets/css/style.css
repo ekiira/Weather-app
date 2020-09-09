@@ -245,6 +245,10 @@ path {
   font-size: 0.7rem;
 }
 
+.label {
+  display: none !important;
+}
+
 .landing {
   position: relative;
   color: white;
