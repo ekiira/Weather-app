@@ -155,7 +155,7 @@ form.addEventListener('submit', async (e) => {
 
 
 weatherDegree.innerHTML = `${wDegree}&#176`
-weatherIcon.src = `http://openweathermap.org/img/wn/${wIcon}@2x.png`
+weatherIcon.src = `https://openweathermap.org/img/wn/${wIcon}@2x.png`
 weatherState.innerHTML = wState
 weatherHumidity.innerHTML =  0 ? humidity : `${humidity}%`
 
