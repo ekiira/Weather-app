@@ -271,11 +271,6 @@ path {
   margin-left: 0;
 }
 
-.colored {
-  color: white;
-  font-family: 'Merriweather', serif;
-}
-
 .banner::after {
   content: "";
   position: absolute;

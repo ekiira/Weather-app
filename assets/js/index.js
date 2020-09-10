@@ -1,4 +1,3 @@
-
 const API_KEY = '77a720e73809ab741a5ab7822f1f337c'
 const form = document.querySelector('form');
 const namee = document.querySelector('input[search-city]');
@@ -49,7 +48,7 @@ form.addEventListener('submit', async (e) => {
     message.innerHTML = 'City not found, Try again'
   }
 
-
+// Set longittude and latitude
   lat = finalResponse.coord.lat;
   lon = finalResponse.coord.lon;
 
